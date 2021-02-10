@@ -4,6 +4,7 @@ builds:
       - CGO_ENABLED=0
     goos:
       - linux
+      - windows
     goarch:
       - amd64
     main: main.go
@@ -18,6 +19,14 @@ dockers:
       - "postfinance/kubenurse:latest"
       - "postfinance/kubenurse:{{ .Tag }}"
     dockerfile: Dockerfile
+  - goos: windows
+    goarch: amd64
+    binaries:
+      - kubenurse
+    image_templates:
+      - "postfinance/kubenurse:latest"
+      - "postfinance/kubenurse:{{ .Tag }}"
+    dockerfile: Dockerfile.win
 checksum:
   name_template: 'checksums.txt'
 snapshot:

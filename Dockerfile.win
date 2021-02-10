@@ -1,0 +1,5 @@
+FROM mcr.microsoft.com/powershell:nanoserver-2004
+LABEL maintainer="OpenSource PF <opensource@postfinance.ch>"
+
+COPY kubenurse /app/kubenurse
+CMD ["/app/kubenurse"]
