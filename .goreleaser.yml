@@ -13,7 +13,7 @@ builds:
 dockers:
   - goos: linux
     goarch: amd64
-    binaries:
+    ids:
       - kubenurse
     image_templates:
       - "postfinance/kubenurse:latest"
@@ -21,7 +21,7 @@ dockers:
     dockerfile: Dockerfile
   - goos: windows
     goarch: amd64
-    binaries:
+    ids:
       - kubenurse
     image_templates:
       - "postfinance/kubenurse:latest"
