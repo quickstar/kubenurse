@@ -24,8 +24,8 @@ dockers:
     ids:
       - kubenurse
     image_templates:
-      - "postfinance/kubenurse:latest"
-      - "postfinance/kubenurse:{{ .Tag }}"
+      - "postfinance/kubenurse:latest-nanoserver-2004"
+      - "postfinance/kubenurse:{{ .Tag }}-nanoserver-2004"
     dockerfile: Dockerfile.win
 checksum:
   name_template: 'checksums.txt'
